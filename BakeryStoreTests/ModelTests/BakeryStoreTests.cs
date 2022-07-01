@@ -23,12 +23,17 @@ namespace BakeryStore.TestTools
     [TestMethod]
     public void BreadClass_CalculatesTotalCostUsingDeals_Int()
     {
-      Bread newBread = newBread(3);
+      Bread newBread = new Bread(3);
       newBread.CalculateTotalCost();
       Assert.AreEqual(10, newBread.TotalCost);
     }
 
     [TestMethod]
-    public void
+    public void BreadClass_CalculatesTotalCostWithOutDeals_Int()
+    {
+      Bread newBread = new Bread(1);
+      newBread.CalculateTotalCost();
+      Assert.AreEqual(5, newBread.TotalCost);
+    }
   }
 }

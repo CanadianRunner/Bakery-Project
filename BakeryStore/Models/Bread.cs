@@ -23,7 +23,8 @@ namespace BakeryStore.Models
         TotalCost = priceOfDeal + priceOfRemaining;
         return TotalCost;
       } else {
-        
+        TotalCost = Quantity * 5;
+        return TotalCost;
       }
     }
   }
