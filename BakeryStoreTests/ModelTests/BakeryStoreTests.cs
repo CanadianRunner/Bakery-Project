@@ -57,5 +57,13 @@ namespace BakeryStore.TestTools
       newPastry.CalculateTotalCost();
       Assert.AreEqual(7, newPastry.TotalCost);
     }
+
+    [TestMethod]
+    public void PastryClass_CalculatesTotalCostWithOutDeals_Int()
+    {
+      Pastry newPastry = new Pastry(1);
+      newPastry.CalculateTotalCost();
+      Assert.AreEqual(2, newPastry.TotalCost);
+    }
   }
 }
