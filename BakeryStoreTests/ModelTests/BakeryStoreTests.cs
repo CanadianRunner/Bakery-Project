@@ -4,7 +4,7 @@ using BakeryStore.Models;
 namespace BakeryStore.TestTools
 {
   [TestClass]
-  public class BreadTests
+  public class BakeryTests
   {
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
@@ -34,6 +34,13 @@ namespace BakeryStore.TestTools
       Bread newBread = new Bread(1);
       newBread.CalculateTotalCost();
       Assert.AreEqual(5, newBread.TotalCost);
+    }
+
+    [TestMethod]
+    public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+    {
+      Pastry newPastry = new Pastry(1);
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
   }
 }
