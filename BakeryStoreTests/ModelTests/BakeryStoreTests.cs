@@ -42,5 +42,13 @@ namespace BakeryStore.TestTools
       Pastry newPastry = new Pastry(1);
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
+
+    [TestMethod]
+    public void PastryClass_SetsQuantity_Int()
+    {
+      Pastry newPastry = new Pastry(3);
+      Assert.AreEqual(3, newPastry.Quantity);
+    }
+  
   }
 }

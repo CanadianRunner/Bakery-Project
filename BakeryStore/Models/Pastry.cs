@@ -13,9 +13,17 @@ namespace BakeryStore.Models
       Quantity = quantity;
     }
 
-    // public int CalculateTotalCost()
-    // {
-
-    // }
+    public int CalculateTotalCost()
+    {
+      if(Quantity > 2)
+      {
+        int remainder = Quantity % 3;
+        TotalCost = (((Quantity - remainder) / 3) * 5) + (remainder * 2);
+        return TotalCost;
+      } else {
+        TotalCost = Quantity * 2;
+        return TotalCost;
+      }
+    }
   }
 }
