@@ -10,7 +10,7 @@ namespace BakeryStore.Models
     public Bread(int quantity, int totalCost = 0)
     {
       TotalCost = totalCost;
-      //omitting quantity for good fail
+      Quantity = quantity;
     }
   }
 }
