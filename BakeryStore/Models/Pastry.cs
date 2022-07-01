@@ -4,7 +4,7 @@ namespace BakeryStore.Models
 {
   public class Pastry
   {
-    public in TotalCost { get; private set; }
+    public int TotalCost { get; private set; }
     public int Quantity { get; private set; }
 
     public Pastry(int quantity, int totalCost = 0)
@@ -13,9 +13,9 @@ namespace BakeryStore.Models
       Quantity = quantity;
     }
 
-    public int CalculateTotalCost()
-    {
-      
-    }
+    // public int CalculateTotalCost()
+    // {
+
+    // }
   }
 }
