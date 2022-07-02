@@ -7,8 +7,6 @@ namespace BakeryStore
   {
     public static void Main()
     {
-      // Console.WriteLine(Ascii.title);
-      // Console.Read();
       string title = @"
  _       __     __                             __           ____  _                    _          ____        __                   __
 | |     / /__  / /________  ____ ___  ___     / /_____     / __ \(_)__  _____________ ( )_____   / __ )____ _/ /_____  _______  __/ /
@@ -22,6 +20,7 @@ namespace BakeryStore
       string userInputStart = "Please press a key to continue.";
       string breadDeal = "buy two get one free!";
       string pastryDeal = "One Pastry for $2. Or 3 pastries for $5!";
+      string couponCode = "PIERRESBAKERYCOUPON1234";
 
       Console.WriteLine(title);
       Console.WriteLine("We're excited for you try our delicious Breads and Pastries!");
@@ -35,27 +34,27 @@ namespace BakeryStore
       Console.WriteLine($"Today I can offer our bread at : {breadDeal}");
       Console.WriteLine($"I can also offer our pastries at even greater discount: {pastryDeal}");
       Console.WriteLine("What can I get started for you today?");
-          Console.Clear();
-      Console.WriteLine("Please enter how many loafs of bread you would like to order today.");
-      string customerBreadOrder = Console.ReadLine();
-      int BreadQuantity = int.Parse(customerBreadOrder);
-      Bread myNewBread = new Bread(BreadQuantity);
-      myNewBread.CalculateTotalCost();
+      Console.Clear();
 
-      // Console.WriteLine("Please enter how many pastries you would like.");
-      // string customerPastryOrder = Console.ReadLine();
-      // int Quantity = int.Parse(customerPastryOrder);
-      // Pastry myNewPastry = new Pastry(Quantity);
-      // myNewPastry.CalculateTotalCost();
+      Console.WriteLine("Please enter how many loafs of bread you would like to order today?");
+      string breadOrder = Console.ReadLine();
+      int BreadQuantity = int.Parse(breadOrder);
+      Bread customerBreadOrder = new Bread(BreadQuantity);
+      customerBreadOrder.CalculateTotalCost();
 
-      ShoppingCart customersBreadCart = new ShoppingCart();
-      customersBreadCart.CalculateTotalCost(myNewBread.TotalCost, 3);
-      // ShoppingCart customersPastryCart = new ShoppingCart();
-      // customersPastryCart.CalculateTotalCost(myNewPastry.TotalCost, 3);
-      // ShoppingCart customersCart = new ShoppingCart();
-      
+      Console.WriteLine("Please enter how many pastries you would like?");
+      string pastryOrder = Console.ReadLine();
+      int Quantity = int.Parse(pastryOrder);
+      Pastry customerPastryOrder = new Pastry(Quantity);
+      customerPastryOrder.CalculateTotalCost();
+      Console.Clear();
 
-      Console.WriteLine($"Your total is: ${customersCart.TotalCost}");
+      ShoppingCart CombinedShoppingCart = new ShoppingCart();
+      CombinedShoppingCart.CalculateTotalCost(customerBreadOrder.TotalCost, customerPastryOrder.TotalCost);
+      int finalCalculation = CombinedShoppingCart.TotalCost;
+      Console.WriteLine($"Your total comes to: $ {finalCalculation}");
+      Console.WriteLine($"Come again! As a gesture of our gratitude, please accept this coupon for 25% off your next order.");
+      Console.WriteLine($"Coupon code: {couponCode}");
     }
   }
 }
