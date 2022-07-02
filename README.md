@@ -14,6 +14,9 @@
 ## Description
 _This is a project I created at Epicodus that allows a customer to shop at Pierres Bakery.  The customer is presented with the starting prices of Pierres baked goods and waits for user input.  The customer then is greeted by Pierres current promotions and a query for how many loafs of bread they want. They user can then input how many pastries they would like.  Finally the customer receives an output of the order total and a coupon code. Developing this application helped grow my understanding of C#, .NET, and Test Driven Development._
 
+![PierresTerminal](https://user-images.githubusercontent.com/92278905/176985266-b476dd3e-cab2-41f2-9d7e-7705b135461d.png)
+
+
 ## Setup/Installation Requirements
 
 1) Clone this repository to your desktop.
