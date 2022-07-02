@@ -72,7 +72,7 @@ namespace BakeryStore.TestTools
       Pastry newPastry = new Pastry(1, 0);
       Bread newBread = new Bread(1, 0);
       ShoppingCart newShoppingCart = new ShoppingCart();
-      newShoppingCart.CalculateTotalCost(1,1);
+      newShoppingCart.CalculateTotalCost(1, 1);
       Assert.AreEqual(2, newShoppingCart.TotalCost);
     }
   }

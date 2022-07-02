@@ -12,25 +12,23 @@
 
 
 ## Description
-_This is a project I created at Epicodus that allows a customer to shop at Pierres Bakery.  The customer is presented with the starting prices of Pierres baked goods and waits for user input.  The can submit their currency amount and receive the exchange value and exchange rate.  Additionally the user has the ability to swap currencies.  Developing this application helped grow my understanding of API's and Asynchronous code. This project represents my ability to navigate HTML, CSS, Markdown, JavaScript/jQuery, API's, and Github._
+_This is a project I created at Epicodus that allows a customer to shop at Pierres Bakery.  The customer is presented with the starting prices of Pierres baked goods and waits for user input.  The customer then is greeted by Pierres current promotions and a query for how many loafs of bread they want. They user can then input how many pastries they would like.  Finally the customer receives an output of the order total and a coupon code. Developing this application helped grow my understanding of C#, .NET, and Test Driven Development._
 
 ## Setup/Installation Requirements
 
 1) Clone this repository to your desktop.
 2) Navigate to the now installed directory and open in your editor of choice.
-3) Create a .env file in the root directory of your cloned project.  You will store your personal API key in the .env.  *This step is very important, the application will not work without your API key, as the .env file has been added to the .gitignore.
-4) Navigate to [ExchangeRate-API](https://www.exchangerate-api.com/) and create a free API key (no payment necessary).
-5) Copy and paste your free API key into the .env file
-6) Open the directory in your terminal and run `$npm install`.
-7) Once your terminal indicates the install is complete, run `$ npm run build`.
-8) When you're ready to view the a live server of the project run `$ npm run start`.
+3) Open the directory and `cd to BakeryStore`.
+4) To build Pierre's Bakery enter: `dotnet build`.
+5) To run Pierre's Bakery enter: `dotnet run`.
+6) Happy Shopping!
 
 ## Project can be found at:
-https://github.com/CanadianRunner/Currency-Exchanger
+https://github.com/CanadianRunner/Bakery-Project.git
 
 ## Known Bugs
 
-* If you enter a negative number you will receive the message "There was an error with this conversion: Failed to fetch"
+* If something besides an integer is entered for bread or pastry totals, the program will stop running.
 
 
 ## License
@@ -39,6 +37,5 @@ If you have any questions or concerns feel free to contact me at code@sean-keane
 
 *This is licensed under the MIT license*
 
-Copyright (c) 6-3-2022 **_Sean Keane_**
+Copyright (c) 7-1-2022 **_Sean Keane_**
 
-Credit to Steve Johnson for the [photograph](https://www.pexels.com/photo/assorted-silver-and-gold-colored-coins-on-gray-surface-1006060/) used in this project. 

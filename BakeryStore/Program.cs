@@ -31,7 +31,7 @@ namespace BakeryStore
       Console.ReadKey();
       Console.Clear();
       Console.WriteLine("Before I take your order; I would like to make you aware of our current promotions.");
-      Console.WriteLine($"Today I can offer our bread at : {breadDeal}");
+      Console.WriteLine($"Today I can offer our bread at: {breadDeal}");
       Console.WriteLine($"I can also offer our pastries at even greater discount: {pastryDeal}");
       Console.WriteLine();
 
