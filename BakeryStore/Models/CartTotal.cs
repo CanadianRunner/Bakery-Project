@@ -10,5 +10,11 @@ namespace BakeryStore.Models
     {
       TotalCost = totalCost;
     }
+
+    public int CalculateFinalCost(int breadCost, int pastryCost)
+    {
+      TotalCost = breadCost + pastryCost;
+      return TotalCost;
+    }
   }
 }
