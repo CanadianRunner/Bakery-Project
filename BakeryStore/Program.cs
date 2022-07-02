@@ -17,7 +17,7 @@ namespace BakeryStore
 ";
       string singleBreadPrice = "One bread loaf = $5.";
       string singlePastryPrice = "One Pastry = $2.";
-      string userInputStart = "Please press a key to continue.";
+      string userInputStart = "Please press a key to continue and see available offers.";
       string breadDeal = "buy two get one free!";
       string pastryDeal = "One Pastry for $2. Or 3 pastries for $5!";
       string couponCode = "PIERRESBAKERYCOUPON1234";
@@ -27,14 +27,13 @@ namespace BakeryStore
       Console.WriteLine($"Our fresh out the oven bread can be had at: {singleBreadPrice}");
       Console.WriteLine($"Our freshly baked pastries can be had for: {singlePastryPrice}");
       Console.WriteLine(userInputStart);
+        
       Console.ReadKey();
       Console.Clear();
-
       Console.WriteLine("Before I take your order; I would like to make you aware of our current promotions.");
       Console.WriteLine($"Today I can offer our bread at : {breadDeal}");
       Console.WriteLine($"I can also offer our pastries at even greater discount: {pastryDeal}");
-      Console.WriteLine("What can I get started for you today?");
-      Console.Clear();
+      Console.WriteLine();
 
       Console.WriteLine("Please enter how many loafs of bread you would like to order today?");
       string breadOrder = Console.ReadLine();
@@ -54,6 +53,7 @@ namespace BakeryStore
       int finalCalculation = CombinedShoppingCart.TotalCost;
       Console.WriteLine($"Your total comes to: $ {finalCalculation}");
       Console.WriteLine($"Come again! As a gesture of our gratitude, please accept this coupon for 25% off your next order.");
+      Console.WriteLine();
       Console.WriteLine($"Coupon code: {couponCode}");
     }
   }
