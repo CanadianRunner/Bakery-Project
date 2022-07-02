@@ -35,7 +35,34 @@ namespace BakeryStore
       Console.WriteLine($"Today I can offer our bread at : {breadDeal}");
       Console.WriteLine($"I can also offer our pastries at even greater discount: {pastryDeal}");
       Console.WriteLine("What can I get started for you today?");
+          Console.Clear();
+      Console.WriteLine("Please enter how many loafs of bread you would like to order today.");
+      string customerBreadOrder = Console.ReadLine();
+      int Quantity = int.Parse(customerBreadOrder);
+      Bread myNewBread = new Bread(Quantity);
+      myNewBread.CalculateTotalCost();
 
+      Console.WriteLine();
+
+      ShoppingCart customersCart = new ShoppingCart();
+      customersCart.CalculateTotalCost(myNewBread.TotalCost, 3);
+
+      Console.WriteLine($"Your total is: ${customersCart.TotalCost}");
     }
+        // public static void CalculateFinalCost();
+    // {
+    //   Console.Clear();
+    //   Console.WriteLine("Please enter how many loafs of bread you would like to order today.");
+    //   string customerBreadOrder = Console.ReadLine();
+    //   int Quantity = int.Parse(customerBreadOrder);
+    //   Bread myNewBread = new Bread(Quantity);
+    //   myNewBread.CalculateFinalCost();
+
+    //   ShoppingCart customersCart = new ShoppingCart();
+    //   customersCart.CalculateFinalCost(myNewBread.TotalCost, 3);
+
+    //   Console.WriteLine($"Your total is: {customersCart.TotalCost}");
+    // }
   }
 }
+

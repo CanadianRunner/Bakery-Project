@@ -2,7 +2,7 @@ using System;
 
 namespace BakeryStore.Models
 {
-  public class shoppingCart
+  public class ShoppingCart
   {
     public int TotalCost { get; private set; }
 
@@ -11,7 +11,7 @@ namespace BakeryStore.Models
       TotalCost = totalCost;
     }
 
-    public int CalculateFinalCost(int breadCost, int pastryCost)
+    public int CalculateTotalCost(int breadCost, int pastryCost)
     {
       TotalCost = breadCost + pastryCost;
       return TotalCost;
