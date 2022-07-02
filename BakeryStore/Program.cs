@@ -17,10 +17,12 @@ namespace BakeryStore
 |__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \__/\____/  /_/   /_/\___/_/  /_/   \___/ /____/  /_____/\__,_/_/|_|\___/_/   \__, (_)   
                                                                                                                          /____/      
 ";
-      string singleBreadPrice = "One bread loaf = $5";
-      string singlePastryPrice = "One Pastry = $2";
-      string userInputStart = "Please press a key to continue";
-      string breadDeal = ""
+      string singleBreadPrice = "One bread loaf = $5.";
+      string singlePastryPrice = "One Pastry = $2.";
+      string userInputStart = "Please press a key to continue.";
+      string breadDeal = "buy two get one free!";
+      string pastryDeal = "One Pastry for $2. Or 3 pastries for $5!";
+
       Console.WriteLine(title);
       Console.WriteLine("We're excited for you try our delicious Breads and Pastries!");
       Console.WriteLine($"Our fresh out the oven bread can be had at: {singleBreadPrice}");
@@ -29,7 +31,9 @@ namespace BakeryStore
       Console.ReadKey();
       Console.Clear();
 
-      Console.WriteLine()
+      Console.WriteLine("Before I take your order; I would like to make you aware of our current promotions.");
+      Console.WriteLine($"Today I can offer our bread at : {breadDeal}");
+      Console.WriteLine($"I can also offer our pastries at even greater discount: {pastryDeal}");
 
     }
   }
