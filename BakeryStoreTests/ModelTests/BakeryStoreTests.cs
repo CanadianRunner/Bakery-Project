@@ -65,5 +65,15 @@ namespace BakeryStore.TestTools
       newPastry.CalculateTotalCost();
       Assert.AreEqual(2, newPastry.TotalCost);
     }
+
+    [TestMethod]
+    public void CartClass_CalculatesTotalOfBreadAndPastry_Int()
+    {
+      Pastry newPastry = new Pastry(1, 0);
+      Bread newBread = new Bread(1, 0);
+      ShoppingCart newShoppingCart = new ShoppingCart();
+      newShoppingCart.CalculateTotalCost(1,1);
+      Assert.AreEqual(2, newShoppingCart.TotalCost);
+    }
   }
 }
