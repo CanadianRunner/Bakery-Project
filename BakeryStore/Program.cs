@@ -16,13 +16,21 @@ namespace BakeryStore
 | |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /_/ /_/ /  / ____/ /  __/ /  / /  /  __/ (__  )  / /_/ / /_/ / ,< /  __/ /  / /_/ /_/  
 |__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \__/\____/  /_/   /_/\___/_/  /_/   \___/ /____/  /_____/\__,_/_/|_|\___/_/   \__, (_)   
                                                                                                                          /____/      
-      ";
+";
       string singleBreadPrice = "One bread loaf = $5";
       string singlePastryPrice = "One Pastry = $2";
+      string userInputStart = "Please press a key to continue";
+      string breadDeal = ""
       Console.WriteLine(title);
       Console.WriteLine("We're excited for you try our delicious Breads and Pastries!");
-      Console.WriteLine($"Our prices are as follows: {singleBreadPrice}");
+      Console.WriteLine($"Our fresh out the oven bread can be had at: {singleBreadPrice}");
       Console.WriteLine($"Our freshly baked pastries can be had for: {singlePastryPrice}");
+      Console.WriteLine(userInputStart);
+      Console.ReadKey();
+      Console.Clear();
+
+      Console.WriteLine()
+
     }
   }
 }
