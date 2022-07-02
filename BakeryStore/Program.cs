@@ -38,31 +38,25 @@ namespace BakeryStore
           Console.Clear();
       Console.WriteLine("Please enter how many loafs of bread you would like to order today.");
       string customerBreadOrder = Console.ReadLine();
-      int Quantity = int.Parse(customerBreadOrder);
-      Bread myNewBread = new Bread(Quantity);
+      int BreadQuantity = int.Parse(customerBreadOrder);
+      Bread myNewBread = new Bread(BreadQuantity);
       myNewBread.CalculateTotalCost();
 
-      Console.WriteLine();
+      // Console.WriteLine("Please enter how many pastries you would like.");
+      // string customerPastryOrder = Console.ReadLine();
+      // int Quantity = int.Parse(customerPastryOrder);
+      // Pastry myNewPastry = new Pastry(Quantity);
+      // myNewPastry.CalculateTotalCost();
 
-      ShoppingCart customersCart = new ShoppingCart();
-      customersCart.CalculateTotalCost(myNewBread.TotalCost, 3);
+      ShoppingCart customersBreadCart = new ShoppingCart();
+      customersBreadCart.CalculateTotalCost(myNewBread.TotalCost, 3);
+      // ShoppingCart customersPastryCart = new ShoppingCart();
+      // customersPastryCart.CalculateTotalCost(myNewPastry.TotalCost, 3);
+      // ShoppingCart customersCart = new ShoppingCart();
+      
 
       Console.WriteLine($"Your total is: ${customersCart.TotalCost}");
     }
-        // public static void CalculateFinalCost();
-    // {
-    //   Console.Clear();
-    //   Console.WriteLine("Please enter how many loafs of bread you would like to order today.");
-    //   string customerBreadOrder = Console.ReadLine();
-    //   int Quantity = int.Parse(customerBreadOrder);
-    //   Bread myNewBread = new Bread(Quantity);
-    //   myNewBread.CalculateFinalCost();
-
-    //   ShoppingCart customersCart = new ShoppingCart();
-    //   customersCart.CalculateFinalCost(myNewBread.TotalCost, 3);
-
-    //   Console.WriteLine($"Your total is: {customersCart.TotalCost}");
-    // }
   }
 }
 
